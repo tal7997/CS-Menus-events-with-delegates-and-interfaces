@@ -24,13 +24,14 @@ namespace Ex04.Menus.Test
             ItemVersionAndCapitals.AddMenuItem(ItemCountCapitals);
             ItemVersionAndCapitals.AddMenuItem(ItemVersion);
 
-            CurrentTimeMenuItem currentTimeListener = new CurrentTimeMenuItem();
-            ItemTime.Chosen += currentTimeListener.ReportMenuItemChoosen;
-            CurrentDateMenuItem currentDateListener = new CurrentDateMenuItem();
-            ItemDate.Chosen += currentDateListener.ReportMenuItemChoosen;
-            VersionMenuItem currentVersionListener = new VersionMenuItem();
-            ItemVersion.Chosen += currentVersionListener.ReportMenuItemChoosen;
+            CurrentTimeMenuItem            currentTimeListener = new CurrentTimeMenuItem();
+            CurrentDateMenuItem            currentDateListener = new CurrentDateMenuItem();
+            VersionMenuItem             currentVersionListener = new VersionMenuItem();
             CountCapitalsMenuItem currentCountCapitalsListener = new CountCapitalsMenuItem();
+
+            ItemTime.Chosen          += currentTimeListener.ReportMenuItemChoosen;
+            ItemDate.Chosen          += currentDateListener.ReportMenuItemChoosen;
+            ItemVersion.Chosen       += currentVersionListener.ReportMenuItemChoosen;
             ItemCountCapitals.Chosen += currentCountCapitalsListener.ReportMenuItemChoosen;
 
             mainMenu.Show();

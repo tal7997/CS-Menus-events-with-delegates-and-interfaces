@@ -100,10 +100,9 @@ namespace Ex04.Menus.Delegates
             Console.WriteLine(string.Format($"Enter your request: (1 to {r_MenuItems.Count} or press 0 to {m_ExitOrBackOption})."));
         }
 
-        // $G$ SFN-006 (-5) The "Input handling" should have managed by the Menus.Test project.
         public int GetUserInput()
         {
-            int answer;//******************************
+            int answer;
 
             if (!(int.TryParse(Console.ReadLine(), out answer)))
             {
